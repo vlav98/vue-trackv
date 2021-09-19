@@ -1,30 +1,22 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+  <div class="w-full" id="app">
+    <div id="nav" class="w-full border-b py-4">
+      <div class="w-2/3 mx-auto flex justify-between">
+        <router-link class="mx-4" to="/">Home</router-link>
+        <router-link class="mx-4" to="/track">Track</router-link>
+      </div>
+    </div>
+    <router-view />
   </div>
-  <router-view />
 </template>
 
+<script lang="ts">
+import './assets/index.css';
+
+export default {
+
+}
+</script>
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
 </style>
