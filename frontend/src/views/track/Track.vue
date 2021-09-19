@@ -43,13 +43,14 @@ export default {
   components: {
 
   },
-  data() {
+  data(): any {
     return {
       dialog: false,
       track: [],
       editedItem: undefined,
       versions: [],
       editedIndex: -1,
+      idTrack: parseInt(this.$route.params.id)
     }
   },
   mounted() {
@@ -65,7 +66,7 @@ export default {
     this.fetchTrackFromApi()
   },
   methods: {
-    fetchTrackFromApi () {
+    fetchTrackFromApi (): any {
       let id = this.$route.params.id
       TrackService.get(id)
         .then((response) => {
